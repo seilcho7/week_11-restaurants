@@ -20,15 +20,15 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <ul>
-              {
-                Object.keys(restaurants).map((types, i)=>(
-                    <li key={i}><button onClick={
-                      this._reset
-                    } value={types}>{types}</button></li>
-                ))
-              }
-          </ul>
+        <ul>
+            {
+            Object.keys(restaurants).map((types, i)=>(
+                <li key={i}><button onClick={
+                    this._reset
+                } value={types}>{types}</button></li>
+            ))
+            }
+            </ul>
           <ul>
               { restaurants[this.state.type] ?
                 Object.keys(restaurants[this.state.type]).map((res, i) => {
